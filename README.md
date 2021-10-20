@@ -11,7 +11,7 @@ This project can be viewed at http://hei-dev.github.io/ai2-Convertor/index.html
     - For 7-zip users, Right click the file -> 7-Zip -> Extract to (Archive name)<br />
     ![7-zip Instruction](README_img/step1.PNG)<br />
     - For others, open the file with the tools as if it is like an archive<br />
-    (Refer to your decompression software for further information and instruction)<br />
+    (Refer to your decompression software for further information and instruction)
   b. For users who does not have file decompression software,<br />
     - Rename "filename.aia" to "filename.zip"<br />
     ![Rename to .zip](README_img/step1b.PNG)
