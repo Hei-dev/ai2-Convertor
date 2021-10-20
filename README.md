@@ -14,6 +14,7 @@ This project can be viewed at http://hei-dev.github.io/ai2-Convertor/index.html
     (Refer to your decompression software for further information and instruction)<br />
   b. For users who does not have file decompression software,<br />
     - Rename "filename.aia" to "filename.zip"<br />
+    ![Rename to .zip](README_img/step1b.PNG)
     - Right click the file -> Extract All...<br />
 3. From the website, click "Choose File"
 4. Navigate to 'your_extracted_folder\src\appinventor\username\your_aia_name\'
