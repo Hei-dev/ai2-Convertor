@@ -26,6 +26,35 @@ ai2sty =
             "id":"color:",
             "isColorHex":"true",
             "value":""
+        },
+        "FontBold":{
+            "id":"font-weight:",
+            "value":{
+                "True":"600",
+                "False":"400",
+            }
+        },        
+        "FontSize":{
+            "id":"font-size:",
+            "value":"px"
+        },
+        "FontTypeface":{
+            "id":"font-family:",
+            "value":{
+                "":"auto",
+                "1":"sans-serif",
+                "2":"serif",
+                "3":"monospace",
+            }
+        },         
+        "Shape":{
+            "id":"border-radius:",
+            "value":{
+                "":"4px",
+                "1":"6px",
+                "2":"0px",
+                "3":"40px",
+            }
         }
     }
 }
