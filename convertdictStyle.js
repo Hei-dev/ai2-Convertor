@@ -18,11 +18,13 @@ ai2sty =
             }
         },
         "BackgroundColor":{
-            "id":"background-color:#",
+            "id":"background-color:",
+            "isColorHex":"true",
             "value":""
         },
         "TextColor":{
-            "id":"color:#",
+            "id":"color:",
+            "isColorHex":"true",
             "value":""
         }
     }
