@@ -14,6 +14,10 @@ Since then I (and my friend) have always been thinking of the idea of porting AI
 We initally wanted to port it to Android Studio, but at the time neither of us knows how to use Android Studio / make Android apps with actual coding, and also we did not investigate about the App Inventor project file (.aia). Therefore, we did not make one.<br />
 Fast forward to today, we have learnt many things since our idea back in 2016-17. I have recently gone back into AI2 and deep dive into the algrithm behind AI2. I have investigated in the aia file and learn about the aia project structure. Then I have decided to work on this project out of passion.
 
+## Type of application
+This app is intended to be able to run on any platform, no matter if you are a MacOS or Windows user, Desktop or Mobile user.<br />
+This app is also intended to be able to run serverless so that the user can download the files and use it offline.
+
 ## Usage
 
 1. Export your AI2 project as .aia
@@ -31,4 +35,4 @@ Fast forward to today, we have learnt many things since our idea back in 2016-17
 4. Navigate to 'your_extracted_folder\src\appinventor\username\your_aia_name\'
 5. Select 'your_screen_name.__scm__'
 
-##### This README is still work in progress.
+#### This README is still work in progress.
