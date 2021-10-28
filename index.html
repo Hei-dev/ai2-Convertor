@@ -70,7 +70,11 @@
                         style += ai2sty.Style[istr].id + ai2sty.Style[istr].value[d[istr]] + ';'
                     }
                     else{
+                        if(ai2sty.Style[istr].isColorHex) {
+                            style += ai2sty.Style[istr].id + d[istr].replace("&HFF", "#") + ai2sty.Style[istr].value + ';'
+                        } else {
                         style += ai2sty.Style[istr].id + d[istr] + ai2sty.Style[istr].value + ';'
+                        }
                     }
                 }
             }
