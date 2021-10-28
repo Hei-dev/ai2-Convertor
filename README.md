@@ -1,7 +1,18 @@
 # ai2-Convertor
- Converts an app inventor 2 .scm file to a HTML file
+ Converts an App Inventor 2 .scm file to a HTML file
 
 This project can be viewed at http://hei-dev.github.io/ai2-Convertor/index.html
+
+__For instructions on how to use it, skip to [here](#usage)__
+
+-------------------
+## Background
+
+App Inventor provides a very easy-to-use UI, allowing you to create a UI that is what you want with instant preview.<br />
+I have been using App Inventor since 2016 and since then I have learned actual coding.
+Since then I (and my friend) have always been thinking of the idea of porting AI2 projects to other platform / IDEs.
+We initally wanted to port it to Android Studio, but at the time neither of us knows how to use Android Studio / make Android apps with actual coding, and also we did not investigate about the App Inventor project file (.aia). Therefore, we did not make one.<br />
+Fast forward to today, we have learnt many things since our idea back in 2016-17. I have recently gone back into AI2 and deep dive into the algrithm behind AI2. I have investigated in the aia file and learn about the aia project structure. Then I have decided to work on this project out of passion.
 
 ## Usage
 
