@@ -55,6 +55,13 @@ ai2sty =
                 "2":"0px",
                 "3":"40px",
             }
-        }
+        },
+        "FontItalic":{
+            "id":"font-style:",
+            "value":{
+                "True":"italic",
+                "False":"unset",
+            }
+        }  
     }
 }
