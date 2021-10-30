@@ -53,10 +53,10 @@
             var style = ''
 
             if((d.$Type == 'HorizontalScrollArrangement') || (d.$Type == 'HorizontalArrangement')){
-                style = 'display:inline-flex'
+                style = 'display:inline-flex;'
             }
             if((d.$Type == 'VerticalScrollArrangement') || (d.$Type == 'VerticalArrangement')){
-                style = 'display:block'
+                style = 'display:block;'
             }
 
             //console.log(d)
@@ -137,7 +137,7 @@
                 catch(ierr){
                     console.log("ERROR WHILE CONVERTING: " + ierr)
                     document.getElementById("logs").innerHTML += "<label style='color:red'>ERROR WHILE CONVERTING "
-                        + obj.$Components[i] + ":" + ierr + "</label>"
+                        + obj.$Components[i] + ":" + ierr + "</label><br>"
                 }
             }
             hcode += '</div></body></html>'
@@ -168,7 +168,7 @@
                     }
                     catch(err){
                         console.log("APPLICATION ERROR:" + err)
-                        document.getElementById("logs").innerHTML += "<label style='color:red'>APPLICATION ERROR: " + err + "\nEnding process...</label>"
+                        document.getElementById("logs").innerHTML += "<label style='color:red'>APPLICATION ERROR: " + err + "\nEnding process...</label><br>"
                     }
                     
                 }
