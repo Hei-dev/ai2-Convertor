@@ -25,10 +25,10 @@
             var extra = ''
             //console.log(d)
             for(var istr in ai2ext.Extra){
-                console.log(istr in d)
+                //console.log(istr in d)
                 if(istr in d){
-                    console.log(istr)
-                    console.log(d[istr])
+                    //console.log(istr)
+                    //console.log(d[istr])
                     if(typeof ai2ext.Extra[istr].value!='string'){
                         extra += ai2ext.Extra[istr].id + ai2ext.Extra[istr].value[d[istr]] + ' '
                     }
@@ -61,7 +61,7 @@
 
             //console.log(d)
             for(var istr in ai2sty.Style){
-                console.log(istr in d)
+                //console.log(istr in d)
                 if(istr in d){
                     //console.log(istr)
                     //console.log(d.TextAlignment)
@@ -95,11 +95,11 @@
         getElement = function(d){ //TODO Change these to reference json file for dict on converting
             checkLog(d)
             if(d.$Type in ai2cmp.Tag){
-                console.log(d.$Type)
+                //console.log(d.$Type)
                 //console.log('is it' + d.$Type == 'HorizontalScrollArrangement')
                 if(d.Text === undefined){
                     if((d.$Type == 'HorizontalScrollArrangement') || (d.$Type == 'HorizontalArrangement') || (d.$Type == 'VerticalScrollArrangement') || (d.$Type == 'VerticalArrangement')){
-                        console.log(d.$Components)
+                        //console.log(d.$Components)
                         var innerContent = ""
                         for(var j=0;j<d.$Components.length;j++){
                             innerContent += getElement(d.$Components[j]) //CONVERT PROCEDURE
@@ -131,10 +131,17 @@
                     + '</title></head>\n<body>\n<div style="">'
             console.log(obj)
             for(var i=0;i<obj.$Components.length;i++){
-                hcode += getElement(obj.$Components[i]) //CONVERT PROCEDURE
+                try{
+                    hcode += getElement(obj.$Components[i]) //CONVERT PROCEDURE
+                }
+                catch(ierr){
+                    console.log("ERROR WHILE CONVERTING: " + ierr)
+                    document.getElementById("infos").innerHTML += "<label style='color:red'>ERROR WHILE CONVERTING "
+                        + obj.$Components[i] + ":" + ierr + "</label>"
+                }
             }
             hcode += '</div></body></html>'
-            console.log(hcode)
+            //console.log(hcode)
             document.getElementById('prev').innerHTML = hcode
             var htmlDoc = null
             var htmlDatas = new Blob([hcode], {type: 'text/plain'});
@@ -160,7 +167,8 @@
                         scmToHtml(scn.Properties)
                     }
                     catch(err){
-                        console.log(err)
+                        console.log("APPLICATION ERROR:" + err)
+                        document.getElementById("infos").innerHTML += "APPLICATION ERROR:" + err
                     }
                     
                 }
