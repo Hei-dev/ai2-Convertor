@@ -136,7 +136,7 @@
                 }
                 catch(ierr){
                     console.log("ERROR WHILE CONVERTING: " + ierr)
-                    document.getElementById("infos").innerHTML += "<label style='color:red'>ERROR WHILE CONVERTING "
+                    document.getElementById("logs").innerHTML += "<label style='color:red'>ERROR WHILE CONVERTING "
                         + obj.$Components[i] + ":" + ierr + "</label>"
                 }
             }
@@ -168,7 +168,7 @@
                     }
                     catch(err){
                         console.log("APPLICATION ERROR:" + err)
-                        document.getElementById("infos").innerHTML += "APPLICATION ERROR:" + err
+                        document.getElementById("logs").innerHTML += "<label style='color:red'>APPLICATION ERROR: " + err + "\nEnding process...</label>"
                     }
                     
                 }
