@@ -3,7 +3,6 @@
 
 The project can be viewed at http://hei-dev.github.io/ai2-Convertor/index.html \
 However, it will be updated at a non-regular schedule.\
-The current version hosted on the website is dated at 19-10-2021
 
 __For instructions on how to use it, skip to [here](#usage)__
 
