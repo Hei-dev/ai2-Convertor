@@ -16,7 +16,8 @@ ai2cmp =
         "HorizontalScrollArrangement":"",
         "HorizontalArrangement":"",
         "VerticalScrollArrangement":"",
-        "VerticalArrangement":""
+        "VerticalArrangement":"",
+        "Canvas":"canvas"
     }
     
 };

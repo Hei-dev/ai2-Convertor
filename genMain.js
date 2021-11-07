@@ -67,9 +67,9 @@ getStyle = function(d){ //d = component json data
 
 /**
  * Convert the ai2 object to a HTML Element 
- * @param d - the ai2 object  
+ * @param {JSON} d  - the ai2 JSON  
  */
-getElement = function(d){ //TODO Change these to reference json file for dict on converting
+function getElement(d){ //TODO Change these to reference json file for dict on converting
     checkLog(d)
     if(d.$Type in ai2cmp.Tag){
         //console.log(d.$Type)
@@ -100,8 +100,11 @@ getElement = function(d){ //TODO Change these to reference json file for dict on
     
 }
 
-
-function scmToHtml(obj){
+/**
+ * Returns the HTML codes from the JSON codes in the .scm file
+ * @param {JSON} obj - The JSON object to be converted
+ */
+function jsonToHTML(obj){
     var hcode = "";
     hcode = '<html><head><meta charset="UTF-8"><title>'
             + obj.AppName + '/' + obj.$Name
@@ -131,6 +134,24 @@ function scmToHtml(obj){
 }
 
 
+/**
+ * Returns the HTML code from a .scm file
+ * @param {FileReader} scmfile - The .scm file 
+ */
+function scmToHTML(scmfile){
+    var tScm = scmfile.split("\n");
+    try{
+        scn = JSON.parse(tScm[2]);
+        console.log(scn);
+        jsonToHTML(scn.Properties)
+    }
+    catch(err){
+        console.log("APPLICATION ERROR:" + err)
+        document.getElementById("logs").innerHTML += "<label style='color:red'>APPLICATION ERROR: " + err + "\nEnding process...</label><br>"
+    }
+}
+
+
 var scn;
     document.getElementById("cFile").addEventListener("change",function(e){
         var f = new FileReader();
@@ -141,7 +162,7 @@ var scn;
             try{
                 scn = JSON.parse(tScm[2]);
                 console.log(scn);
-                scmToHtml(scn.Properties)
+                jsonToHTML(scn.Properties)
             }
             catch(err){
                 console.log("APPLICATION ERROR:" + err)
