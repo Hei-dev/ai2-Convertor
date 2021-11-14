@@ -54,7 +54,7 @@ function getStyle(ai2obj){ //ai2obj = component json data
             //console.log(ai2obj.TextAlignment)
             //console.log(ai2obj[istr])
             if(typeof ai2sty.Style[istr].value!='string'){
-                style += ai2sty.Style[istr].id + ai2sty.Style[istr].value[ai2obj[istr]] + ';'
+                style += ai2sty.Style[istr].id + ai2sty.Style[istr].value[ai2obj[istr]] + ';' //Get values from the dict
             }
             else{
                 if(ai2sty.Style[istr].isColorHex) {
