@@ -11,8 +11,8 @@ function genExtra(ai2obj){ //Gen extra attributes such as src, onclick
         if(istr in ai2obj){
             //console.log(istr)
             //console.log(ai2obj[istr])
-            if(typeof ai2ext.Extra[istr].value!='string'){
-                extra += ai2ext.Extra[istr].id + ai2ext.Extra[istr].value[ai2obj[istr]] + ' '
+            if(typeof ai2ext.Extra[istr].value!='string'){ //Identifies the type of the object
+                extra += ai2ext.Extra[istr].id + ai2ext.Extra[istr].value[ai2obj[istr]] + ' ' //Get values from the dict
             }
             else{
                 extra += ai2ext.Extra[istr].id + ai2obj[istr] + ai2ext.Extra[istr].value + ' '
